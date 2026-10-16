@@ -1,0 +1,40 @@
+# Kindle Dash configuration. Paths can be absolute, start with ~/, or be relative
+# to this file's directory.
+
+[app]
+# Seconds per page; 0 disables auto-cycling (tap to change pages).
+cycle_seconds=30
+# Layout direction: landscape, landscape-left (landscape turned the other way),
+# portrait, or auto (match the window). The app rotates its own drawing and taps.
+orientation=landscape
+font=Sans
+ca_bundle=cacert.pem
+# Pages in display order. Each entry names a [page:*] section below.
+pages=page:clock;page:weather;page:diagram
+
+[page:clock]
+type=clock
+hour24=true
+# Label|POSIX TZ string; separate cities with ';'
+cities=Sioux Falls|CST6CDT,M3.2.0,M11.1.0;UTC|UTC0;Europe|CET-1CEST,M3.5.0,M10.5.0/3
+
+[page:weather]
+type=weather
+latitude=43.5446
+longitude=-96.7311
+# IANA time zone; decides where each forecast day starts.
+timezone=America/Chicago
+days=10
+# imperial or metric 
+units=imperial
+refresh_minutes=30
+
+#[page:diagram]
+#type=svg
+#title=Diagram
+# Relative path to the .ini
+#path=example_image.svg
+#fit=contain
+#margin=2
+# Set to 0 to poll
+#poll_seconds=0
