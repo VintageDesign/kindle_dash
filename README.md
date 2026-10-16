@@ -2,6 +2,11 @@
 
 A GTK2 dashboard for a  Kindle Paperwhite 4. It cycles through a configurable set of pages. 
 
+
+![clock screen](./docs/images/shot-0.png)
+
+![weather_screen](./docs/images/shot-1.png)
+
 ## Configuration (`dash.ini`)
 `[app] pages=` lists the pages in order. Each entry names a `[page:*]` section, and the section's `type=` picks the code that draws it. See `kual/kindledash/dash.ini.example`.
 
